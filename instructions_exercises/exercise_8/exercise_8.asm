@@ -17,12 +17,11 @@
 Start: 
     ldy #10         ; Initialize the Y register with the decimal value 10 
  
-Loop:  
-    ; TODO: 
-                    ; Transfer Y to A 
-                    ; Store the value in A inside memory position $80+Y 
-                    ; Decrement Y 
-                    ; Branch back to "Loop" until we are done 
+Loop: 
+    tya             ; Transfer Y to A 
+    sta $80,Y       ; Store the value in A inside memory position $80+Y 
+    dey             ; Decrement Y 
+    bpl Loop        ; Branch if plus (only if result of last instruction was positive) 
  
     org $FFFC       ; End the ROM always at position $FFFC 
     .word Start     ; Put 2 bytes with reset address at memory position $FFFC 

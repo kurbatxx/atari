@@ -12,6 +12,7 @@
     org $F000       ; Define the origin of the ROM code at memory address $F000 
  
 Start: 
+    cld             ; Clear Decimal
     lda #100        ; Load the A register with the literal decimal value 100 
     
     clc
