@@ -16,6 +16,8 @@ Start:
     ldx #6          ; Load X with the decimal value #6 
     txa             ; Transfer X to Y 
     tay             ;
+
+    jmp Start
     
     org $FFFC      ; End the ROM by adding required values to memory position $FFFC 
     .word Start    ; Put 2 bytes with the reset address at memory position $FFFC 
