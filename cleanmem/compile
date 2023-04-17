@@ -1,1 +1,1 @@
-dasm cleanmem.asm -f3 -v0 -o"cart.bin"
+dasm cleanmem.asm -f3 -ocart.bin

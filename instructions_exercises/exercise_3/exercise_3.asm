@@ -2,7 +2,7 @@
 ; This exercise is about transferring values from registers to other registers. 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-   processor 6502 
+    processor 6502 
     seg Code        ; Define a new segment named "Code" 
     org $F000       ; Define the origin of the ROM code at memory address $F000 
 Start: 
